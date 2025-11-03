@@ -3,10 +3,11 @@ self.addEventListener('install', (event) => {
   console.log('🛠️ Service Worker: Installed');
   event.waitUntil(
     caches.open("v1").then((cache) => {
-      return cache.addAll(["/", "/index.html", "/assets/index.js", "/assets/index.css"]);
+      return cache.addAll(["/", "/index.html"]);
     })
   );
 });
+
 
 self.addEventListener('activate', (event) => {
   console.log('🚀 Service Worker: Activated');
