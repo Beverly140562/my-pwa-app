@@ -1,8 +1,11 @@
 
-// public/service-worker.js
-
 self.addEventListener('install', (event) => {
   console.log('🛠️ Service Worker: Installed');
+  event.waitUntil(
+    caches.open("v1").then((cache) => {
+      return cache.addAll(["/", "/index.html", "/assets/index.js", "/assets/index.css"]);
+    })
+  );
 });
 
 self.addEventListener('activate', (event) => {
