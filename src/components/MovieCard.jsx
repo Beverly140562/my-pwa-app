@@ -5,11 +5,9 @@ import { Star, Calendar, Eye } from "lucide-react";
 function MovieCard({ movie }) {
   return (
     <div className="group relative bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
-      {/* Glowing border effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
 
       <div className="relative">
-        {/* Image container with overlay */}
         <div className="relative overflow-hidden">
           <img
             src={
@@ -21,10 +19,8 @@ function MovieCard({ movie }) {
             className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700"
           />
 
-          {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60"></div>
 
-          {/* Year badge */}
           <div className="absolute top-3 right-3 flex items-center gap-1 bg-black/70 backdrop-blur-sm px-3 py-1 rounded-full">
             <Calendar className="w-3 h-3 text-purple-400" />
             <span className="text-white text-sm font-semibold">{movie.Year}</span>
@@ -54,7 +50,6 @@ function MovieCard({ movie }) {
         </div>
       </div>
 
-      {/* Bottom accent line */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
     </div>
   );
